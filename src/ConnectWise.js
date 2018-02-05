@@ -230,6 +230,7 @@ function apiPromise(path, method, params, config) {
           return resolve({});
         } else {
           try {
+
             var body = JSON.parse(res.body);
             if (body.code) {
               return reject(body);
