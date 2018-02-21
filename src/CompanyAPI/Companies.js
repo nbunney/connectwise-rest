@@ -105,6 +105,14 @@ Companies.prototype.getCompanyById = function (id) {
 };
 
 /**
+ * @param {string|number} id numeric ID of company, not the company ID in ConnectWise.
+ * @returns {Promise<Groups>}
+ */
+Companies.prototype.getCompanyGroupsById = function (id) {
+  return this.api('/company/companies/' + id + '/groups', 'GET');
+};
+
+/**
  * @param {string|number} id
  * @param {Company} company
  * @returns {Promise<Company>}
