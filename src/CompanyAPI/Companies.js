@@ -106,6 +106,22 @@ Companies.prototype.getCompanyById = function (id) {
 
 /**
  * @param {string|number} id numeric ID of company, not the company ID in ConnectWise.
+ * @returns {Promise<Company>}
+ */
+Companies.prototype.getCompanySitesById = function (id) {
+  return this.api('/company/companies/' + id + '/sites', 'GET');
+};
+
+/**
+ * @param {string|number} id numeric ID of company, not the company ID in ConnectWise.
+ * @returns {Promise<Company>}
+ */
+Companies.prototype.getCompanyContactTypes = function (id) {
+  return this.api('/company/contacts/types', 'GET');
+};
+
+/**
+ * @param {string|number} id numeric ID of company, not the company ID in ConnectWise.
  * @returns {Promise<Groups>}
  */
 Companies.prototype.getCompanyGroupsById = function (id) {
