@@ -1,6 +1,6 @@
 {
   "name": "connectwise-rest",
-  "version": "0.0.13",
+  "version": "0.0.15",
   "description": "A nodejs module for interacting with the ConnectWise REST API.",
   "main": "index.js",
   "scripts": {
@@ -19,8 +19,8 @@
     "nodejs"
   ],
   "author": {
-    "name": "Kevin Grube",
-    "email": "grube.kevin@gmail.com"
+    "name": "Nate Bunney branched from Kevin Grube",
+    "email": "geektech2000@gmail.com"
   },
   "license": "MIT",
   "bugs": {
