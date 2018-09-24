@@ -116,7 +116,16 @@ Companies.prototype.getCompanySitesById = function (id) {
  * @param {string|number} id numeric ID of company, not the company ID in ConnectWise.
  * @returns {Promise<Company>}
  */
-Companies.prototype.getCompanyContactTypes = function (id) {
+Companies.prototype.getCompanyType = function (id) {
+  return this.api('/company/companies/types/'+id, 'GET');
+};
+
+
+/**
+ * @param {string|number} id numeric ID of company, not the company ID in ConnectWise.
+ * @returns {Promise<Company>}
+ */
+Companies.prototype.getCompanyContactTypes = function () {
   return this.api('/company/contacts/types', 'GET');
 };
 
