@@ -120,6 +120,13 @@ Companies.prototype.getCompanyType = function (id) {
   return this.api('/company/companies/types/'+id, 'GET');
 };
 
+/**
+ * @param {string|number} id numeric ID of company, not the company ID in ConnectWise.
+ * @returns {Promise<Company>}
+ */
+Companies.prototype.getCompanyTypeAssociations = function (id) {
+  return this.api('/company/companies/'+id+'/typeAssociations', 'GET');
+};
 
 /**
  * @param {string|number} id numeric ID of company, not the company ID in ConnectWise.
