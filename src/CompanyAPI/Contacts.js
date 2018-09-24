@@ -80,6 +80,14 @@ inherits(Contacts, ConnectWise);
  * @param {Params} params
  * @returns {Promise<Contact[]>}
  */
+Contacts.prototype.getDepartments = function (params) {
+  return this.api('/company/contacts/departments', 'GET', params);
+};
+
+/**
+ * @param {Params} params
+ * @returns {Promise<Contact[]>}
+ */
 Contacts.prototype.getContacts = function (params) {
   return this.api('/company/contacts', 'GET', params);
 };
