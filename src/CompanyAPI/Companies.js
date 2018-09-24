@@ -125,7 +125,9 @@ Companies.prototype.getCompanyType = function (id) {
  * @returns {Promise<Company>}
  */
 Companies.prototype.getCompanyTypeAssociations = function (id) {
-  return this.api('/company/companies/'+id+'/typeAssociations', 'GET');
+  const assoc = this.api('/company/companies/'+id+'/typeAssociations', 'GET');
+  console.log(assoc);
+  return assoc;
 };
 
 /**
