@@ -73,6 +73,13 @@ function Companies(options) {
 inherits(Companies, ConnectWise);
 
 /**
+ * @returns {Promise<PortalSecurity[]>}
+ */
+Companies.prototype.getPortalSecurityLevels = function () {
+  return this.api('/company/portalSecurityLevels', 'GET');
+};
+
+/**
  * @param {Params} params
  * @returns {Promise<Company[]>}
  */
