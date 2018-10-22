@@ -134,6 +134,7 @@ Contacts.prototype.getContactCommunicationsById = function (id) {
 };
 
 Contacts.prototype.deleteContactCommunicationsById = function (id, communicationID) {
+  console.log('/company/contacts/' + id + '/communications/' + communicationID, 'DELETE');
   return this.api('/company/contacts/' + id + '/communications/' + communicationID, 'DELETE');
 };
 
