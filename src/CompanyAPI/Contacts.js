@@ -138,6 +138,7 @@ Contacts.prototype.deleteContactCommunicationsById = function (id, communication
 };
 
 Contacts.prototype.replaceContactCommunicationsById = function (id, communicationID, params) {
+  console.log('/company/contacts/' + id + '/communications/' + communicationID, 'put', params);
   return this.api('/company/contacts/' + id + '/communications/' + communicationID, 'put', params);
 };
 
