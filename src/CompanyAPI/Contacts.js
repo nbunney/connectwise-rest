@@ -133,12 +133,12 @@ Contacts.prototype.getContactCommunicationsById = function (id) {
   return this.api('/company/contacts/' + id + '/communications', 'GET');
 };
 
-/**
- * @param {string|number} id
- * @returns {Promise<Communications>}
- */
 Contacts.prototype.deleteContactCommunicationsById = function (id, communicationID) {
   return this.api('/company/contacts/' + id + '/communications/' + communicationID, 'DELETE');
+};
+
+Contacts.prototype.replaceContactCommunicationsById = function (id, communicationID, params) {
+  return this.api('/company/contacts/' + id + '/communications/' + communicationID, 'put', params);
 };
 
 
