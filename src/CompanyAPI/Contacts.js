@@ -143,6 +143,10 @@ Contacts.prototype.replaceContactCommunicationsById = function (id, communicatio
   return this.api('/company/contacts/' + id + '/communications/' + communicationID, 'put', params);
 };
 
+Contacts.prototype.addContactCommunicationsById = function (id, params) {
+  console.log('/company/contacts/' + id + '/communications/', 'post', params);
+  return this.api('/company/contacts/' + id + '/communications/', 'post', params);
+};
 
 /**
  * @param {string|number} id
