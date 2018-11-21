@@ -88,6 +88,16 @@ Contacts.prototype.getDepartments = function (params) {
  * @param {Params} params
  * @returns {Promise<Contact[]>}
  */
+Contacts.prototype.addDepartment = function (departmentName) {
+  return this.api('/company/contacts/departments', 'POST', {
+    name: departmentName
+  });
+};
+
+/**
+ * @param {Params} params
+ * @returns {Promise<Contact[]>}
+ */
 Contacts.prototype.getContacts = function (params) {
   return this.api('/company/contacts', 'GET', params);
 };
