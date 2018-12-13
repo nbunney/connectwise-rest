@@ -25,12 +25,12 @@ var DEFAULTS = {
  * @param {string} options.companyUrl
  * @param {string} options.apiVersion
  * @param {string} [options.entryPoint] defaults to 'v4_6_release'
- * @param {number} [options.timeout] defaults to 20000 (20 seconds)
+ * @param {number} [options.timeout] defaults to 60000 (60 seconds)
  * @param {boolean} [options.retry] defaults to false
  * @param {object} [options.retryOptions] defaults to {
       retries: 4,
       minTimeout: 50,
-      maxTimeout: 20000,
+      maxTimeout: 60000,
       randomize: true,
     }
  * @param {boolean} [options.debug] defaults to false
@@ -65,7 +65,7 @@ function ConnectWise(options) {
   }
 
   if (!options.timeout) {
-    options.timeout = 20000;
+    options.timeout = 60000;
   }
 
   if (!options.apiVersion) {
