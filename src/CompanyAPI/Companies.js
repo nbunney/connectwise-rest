@@ -179,6 +179,15 @@ Companies.prototype.updateCompany = function (id, ops) {
   return this.api('/company/companies/' + id, 'PATCH', ops);
 };
 
+/**
+ * @param {string|number} id numeric ID of company, not the company ID in ConnectWise.
+ * @returns {Promise<Company>}
+ */
+Companies.prototype.getTypeById = function (id) {
+  return this.api('/company/companies/info/types/' + id, 'GET');
+};
+
+
 
 /**
  * @TODO finish this one
