@@ -43,6 +43,10 @@ Boards.prototype.getBoards = function (params) {
   return this.api('/service/boards', 'GET', params);
 };
 
+Boards.prototype.getBoardAutoAssignment = function (id) {
+  return this.api('/service/boards/'+id+'/autoAssignResources', 'GET');
+};
+
 /**
  * POST
  * @param {Board} board
